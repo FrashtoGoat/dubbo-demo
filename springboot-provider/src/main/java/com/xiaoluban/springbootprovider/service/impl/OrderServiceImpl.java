@@ -1,4 +1,4 @@
-package com.xiaoluban.springbootconsumer.service.impl;
+package com.xiaoluban.springbootprovider.service.impl;
 
 import com.example.dubbospringbootinterface.service.OrderService;
 import org.apache.dubbo.config.annotation.DubboService;

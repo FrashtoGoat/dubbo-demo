@@ -2,6 +2,8 @@ dubbo:
   application:
     name: springboot-consumer
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://192.168.229.129:2181
 #  monitor:
 #    protocol: registry
+server:
+  port: 8081

@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 /**
  * @author txb
  * @version 1.0.0
@@ -23,6 +25,6 @@ public class OrderController {
     @GetMapping("initOrder")
     public String initOrder(){
         orderService.initOrder();
-        return "订单创建成功";
+        return "订单创建成功"+ LocalDateTime.now();
     }
 }
