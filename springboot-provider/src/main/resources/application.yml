@@ -1,7 +1,19 @@
 dubbo:
   application:
     name: springboot-provider
+  protocol:
+    name: dubbo
+    port: -1
   registry:
-    address: zookeeper://192.168.229.129:2181
-#  monitor:
-#    protocol: registry
+    id: zk-registry
+    address: zookeeper://192.168.210.133:2181?backup=192.168.210.135:2181,192.168.210.136:2181
+    timeout: 25000
+    parameters:
+      blockUntilConnectedWait: 25
+
+  config-center:
+    address: zookeeper://192.168.210.133:2181?backup=192.168.210.135:2181,192.168.210.136:2181
+    timeout: 25000
+  metadata-report:
+    address: zookeeper://192.168.210.133:2181?backup=192.168.210.135:2181,192.168.210.136:2181
+
